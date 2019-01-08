@@ -1,0 +1,47 @@
+<html><head>
+  <SCRIPT src="./web-files/dtjava.js"></SCRIPT>
+<script>
+    function launchApplication(jnlpfile) {
+        dtjava.launch(            {
+                url : 'FrameGrabberFX.jnlp',
+                jnlp_content : 'PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjxqbmxwIHNwZWM9IjEuMCIgeG1sbnM6amZ4PSJodHRwOi8vamF2YWZ4LmNvbSIgaHJlZj0iRnJhbWVHcmFiYmVyRlguam5scCI+DQogIDxpbmZvcm1hdGlvbj4NCiAgICA8dGl0bGU+RnJhbWVHcmFiYmVyRlg8L3RpdGxlPg0KICAgIDx2ZW5kb3I+UmFmYWVsPC92ZW5kb3I+DQogICAgPGRlc2NyaXB0aW9uPm51bGw8L2Rlc2NyaXB0aW9uPg0KICAgIDxvZmZsaW5lLWFsbG93ZWQvPg0KICA8L2luZm9ybWF0aW9uPg0KICA8cmVzb3VyY2VzPg0KICAgIDxqMnNlIHZlcnNpb249IjEuNisiIGphdmEtdm0tYXJncz0iLURqYXZhLmxpYnJhcnkucGF0aD0iQzpcb3BlbmN2XGJ1aWxkXGphdmFceDY0XCIgLVhtczUxMm0gLVhteDFHICIgIGhyZWY9Imh0dHA6Ly9qYXZhLnN1bi5jb20vcHJvZHVjdHMvYXV0b2RsL2oyc2UiLz4NCiAgICA8amFyIGhyZWY9IkZyYW1lR3JhYmJlckZYLmphciIgc2l6ZT0iNzMyNCIgZG93bmxvYWQ9ImVhZ2VyIiAvPg0KICAgIDxqYXIgaHJlZj0ibGliXG9wZW5jdi00MDAuamFyIiBzaXplPSI0NjI3NTEiIGRvd25sb2FkPSJlYWdlciIgLz4NCiAgPC9yZXNvdXJjZXM+DQogIDxhcHBsZXQtZGVzYyAgd2lkdGg9IjgwMCIgaGVpZ2h0PSI2MDAiIG1haW4tY2xhc3M9ImNvbS5qYXZhZngubWFpbi5Ob0phdmFGWEZhbGxiYWNrIiAgbmFtZT0iRnJhbWVHcmFiYmVyRlgiID4NCiAgICA8cGFyYW0gbmFtZT0icmVxdWlyZWRGWFZlcnNpb24iIHZhbHVlPSI4LjArIi8+DQogIDwvYXBwbGV0LWRlc2M+DQogIDxqZng6amF2YWZ4LWRlc2MgIHdpZHRoPSI4MDAiIGhlaWdodD0iNjAwIiBtYWluLWNsYXNzPSJDbGFzc2VzLk1haW4iICBuYW1lPSJGcmFtZUdyYWJiZXJGWCIgLz4NCiAgPHVwZGF0ZSBjaGVjaz0iYWx3YXlzIi8+DQo8L2pubHA+DQo='
+            },
+            {
+                javafx : '8.0+',
+                jvmargs : '-Djava.library.path="C:\opencv\build\java\x64\" -Xms512m -Xmx1G '
+            },
+            {}
+        );
+        return false;
+    }
+</script>
+
+<script>
+    function javafxEmbedClasses() {
+        dtjava.embed(
+            {
+                id : 'Classes',
+                url : 'FrameGrabberFX.jnlp',
+                placeholder : 'javafx-app-placeholder',
+                width : '800',
+                height : '600',
+                jnlp_content : 'PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjxqbmxwIHNwZWM9IjEuMCIgeG1sbnM6amZ4PSJodHRwOi8vamF2YWZ4LmNvbSIgaHJlZj0iRnJhbWVHcmFiYmVyRlguam5scCI+DQogIDxpbmZvcm1hdGlvbj4NCiAgICA8dGl0bGU+RnJhbWVHcmFiYmVyRlg8L3RpdGxlPg0KICAgIDx2ZW5kb3I+UmFmYWVsPC92ZW5kb3I+DQogICAgPGRlc2NyaXB0aW9uPm51bGw8L2Rlc2NyaXB0aW9uPg0KICAgIDxvZmZsaW5lLWFsbG93ZWQvPg0KICA8L2luZm9ybWF0aW9uPg0KICA8cmVzb3VyY2VzPg0KICAgIDxqMnNlIHZlcnNpb249IjEuNisiIGphdmEtdm0tYXJncz0iLURqYXZhLmxpYnJhcnkucGF0aD0iQzpcb3BlbmN2XGJ1aWxkXGphdmFceDY0XCIgLVhtczUxMm0gLVhteDFHICIgIGhyZWY9Imh0dHA6Ly9qYXZhLnN1bi5jb20vcHJvZHVjdHMvYXV0b2RsL2oyc2UiLz4NCiAgICA8amFyIGhyZWY9IkZyYW1lR3JhYmJlckZYLmphciIgc2l6ZT0iNzMyNCIgZG93bmxvYWQ9ImVhZ2VyIiAvPg0KICAgIDxqYXIgaHJlZj0ibGliXG9wZW5jdi00MDAuamFyIiBzaXplPSI0NjI3NTEiIGRvd25sb2FkPSJlYWdlciIgLz4NCiAgPC9yZXNvdXJjZXM+DQogIDxhcHBsZXQtZGVzYyAgd2lkdGg9IjgwMCIgaGVpZ2h0PSI2MDAiIG1haW4tY2xhc3M9ImNvbS5qYXZhZngubWFpbi5Ob0phdmFGWEZhbGxiYWNrIiAgbmFtZT0iRnJhbWVHcmFiYmVyRlgiID4NCiAgICA8cGFyYW0gbmFtZT0icmVxdWlyZWRGWFZlcnNpb24iIHZhbHVlPSI4LjArIi8+DQogIDwvYXBwbGV0LWRlc2M+DQogIDxqZng6amF2YWZ4LWRlc2MgIHdpZHRoPSI4MDAiIGhlaWdodD0iNjAwIiBtYWluLWNsYXNzPSJDbGFzc2VzLk1haW4iICBuYW1lPSJGcmFtZUdyYWJiZXJGWCIgLz4NCiAgPHVwZGF0ZSBjaGVjaz0iYWx3YXlzIi8+DQo8L2pubHA+DQo='
+            },
+            {
+                javafx : '8.0+',
+                jvmargs : '-Djava.library.path="C:\opencv\build\java\x64\" -Xms512m -Xmx1G '
+            },
+            {}
+        );
+    }
+    <!-- Embed FX application into web page once page is loaded -->
+    dtjava.addOnloadCallback(javafxEmbedClasses);
+</script>
+
+</head><body>
+<h2>Test page for <b>FrameGrabberFX</b></h2>
+  <b>Webstart:</b> <a href='FrameGrabberFX.jnlp' onclick="return launchApplication('FrameGrabberFX.jnlp');">click to launch this app as webstart</a><br><hr><br>
+
+  <!-- Applet will be inserted here -->
+  <div id='javafx-app-placeholder'></div>
+</body></html>

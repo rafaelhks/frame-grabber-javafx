@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="425.0" prefWidth="307.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Classes.TelaController">
+   <children>
+      <Pane prefHeight="425.0" prefWidth="307.0" style="-fx-background-color: #e6e6e6;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" text="Arquivo de vídeo:" textFill="#222222" />
+            <TextField fx:id="fileDir" layoutX="14.0" layoutY="31.0" prefHeight="25.0" prefWidth="231.0" />
+            <Button fx:id="fileButton" layoutX="255.0" layoutY="31.0" mnemonicParsing="false" onMousePressed="#handleButtonPressed" onMouseReleased="#handleButtonRelease" prefHeight="25.0" prefWidth="42.0" style="-fx-background-color: #e6e6e6; -fx-border-color: #4f4f4f; -fx-border-radius: 90; -fx-background-radius: 90;" text="..." textAlignment="CENTER">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <TextField fx:id="outDir" layoutX="14.0" layoutY="81.0" prefHeight="25.0" prefWidth="231.0" text="C:\" />
+            <Label layoutX="14.0" layoutY="64.0" text="Diretório de saída:" textFill="#222222" />
+            <HBox layoutX="12.0" layoutY="119.0" prefHeight="215.0" prefWidth="283.0">
+               <children>
+                  <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-padding: 10; -fx-border-color: #4f4f4f; -fx-border-insets: 5; -fx-border-radius: 10;">
+                     <children>
+                        <Label layoutX="33.0" layoutY="6.0" text="Configurações" textFill="#222222" />
+                        <Label layoutX="25.0" layoutY="34.0" text="Padrão de nome:" textFill="#222222" />
+                        <TextField fx:id="namePattern" layoutX="18.0" layoutY="57.0" prefHeight="25.0" prefWidth="106.0" promptText="XX0, XX1, ..., XXN" />
+                        <Label layoutX="18.0" layoutY="99.0" text="Intervalo de frames:" textFill="#222222" />
+                        <TextField fx:id="fpsInterval" layoutX="17.0" layoutY="124.0" prefHeight="25.0" prefWidth="106.0" promptText="2" />
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-padding: 10; -fx-border-color: #4f4f4f; -fx-border-radius: 10; -fx-border-insets: 5;">
+                     <children>
+                        <Label layoutX="29.0" layoutY="6.0" text="Transformações" textFill="#222222" />
+                        <CheckBox fx:id="redim" layoutX="15.0" layoutY="109.0" mnemonicParsing="false" onAction="#handleTransform" text="Redimensionar" textAlignment="CENTER" textFill="#222222" />
+                        <CheckBox fx:id="rotate" layoutX="15.0" layoutY="35.0" mnemonicParsing="false" onAction="#handleTransform" text="Rotacionar" textAlignment="CENTER" textFill="#222222" />
+                        <Spinner fx:id="rotateAngle" disable="true" layoutX="22.0" layoutY="64.0" prefHeight="0.0" prefWidth="100.0">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Spinner>
+                        <Label layoutX="14.0" layoutY="142.0" text="Altura: " textFill="#222222" />
+                        <Label layoutX="12.0" layoutY="180.0" text="Largura:" textFill="#222222" />
+                        <TextField fx:id="newHeight" disable="true" layoutX="64.0" layoutY="138.0" prefHeight="25.0" prefWidth="67.0" />
+                        <TextField fx:id="newWidth" disable="true" layoutX="64.0" layoutY="176.0" prefHeight="25.0" prefWidth="67.0" />
+                     </children>
+                  </Pane>
+               </children>
+            </HBox>
+            <Button fx:id="initButton" defaultButton="true" layoutX="124.0" layoutY="343.0" mnemonicParsing="false" onAction="#handleButtonClick" onMousePressed="#handleButtonPressed" onMouseReleased="#handleButtonRelease" style="-fx-background-color: #e6e6e6; -fx-border-color: #4f4f4f; -fx-border-radius: 90; -fx-background-radius: 90;" text="INICIAR" textAlignment="CENTER">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <DropShadow height="10.62" offsetX="2.0" offsetY="2.0" radius="5.18" width="12.1" />
+               </effect>
+            </Button>
+            <ProgressBar id="progressBar" fx:id="progressBar" layoutX="12.0" layoutY="386.0" prefHeight="18.0" prefWidth="283.0" progress="0.0" style="-fx-color: green;">
+               <effect>
+                  <Reflection fraction="0.73" topOpacity="0.45" />
+               </effect>
+            </ProgressBar>
+            <Button fx:id="outDirButton" layoutX="255.0" layoutY="80.0" mnemonicParsing="false" onMousePressed="#handleButtonPressed" onMouseReleased="#handleButtonRelease" prefHeight="25.0" prefWidth="42.0" style="-fx-background-color: #e6e6e6; -fx-border-color: #4f4f4f; -fx-border-radius: 90; -fx-background-radius: 90;" text="..." textAlignment="CENTER">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
